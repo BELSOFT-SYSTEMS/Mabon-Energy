@@ -1,5 +1,6 @@
 import React from 'react';
-import './Hero.css'
+import './Hero.css';
+import {HiLocationMarker} from 'react-icons/hi';
 
 const Hero = () => {
   return (
@@ -8,6 +9,7 @@ const Hero = () => {
             {/* left side */}
             <div className="flexColStart hero-left">
                 <div className="hero-title">
+                    <div className="orange-circle" />
                     <h1>Discover<br /> 
                     Mabon Limited <br />Power Generation
                     </h1>
@@ -20,8 +22,10 @@ const Hero = () => {
                     and operate the Dadin Kowa Hydropower Plant in Gombe State, Nigeria.
                     </span>
                 </div>
-                <div className="search-bar">
-                    search bar
+                <div className="flexCenter search-bar">
+                    <HiLocationMarker color="var(--blue)" size={25} />
+                    <input type="text" />
+                    <button className="button">Search</button>
                 </div>
             </div>
 {/* right side */}
