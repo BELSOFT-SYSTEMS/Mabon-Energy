@@ -1,6 +1,7 @@
 import React from 'react';
 import './Hero.css';
 import {HiLocationMarker} from 'react-icons/hi';
+import CountUp from "react-countup"
 
 const Hero = () => {
   return (
@@ -15,10 +16,10 @@ const Hero = () => {
                     </h1>
                 </div>
                 <div className="flexColStart hero-des">
-                    <span>
+                    <span className='secondaryText'>
                     Mabon Energy Limited has been awarded a concession to complete 
                     </span>
-                    <span>
+                    <span className='secondaryText'>
                     and operate the Dadin Kowa Hydropower Plant in Gombe State, Nigeria.
                     </span>
                 </div>
@@ -26,6 +27,33 @@ const Hero = () => {
                     <HiLocationMarker color="var(--blue)" size={25} />
                     <input type="text" />
                     <button className="button">Search</button>
+                </div>
+                <div className="flexCenter stats">
+                    <div className="flexColCenter stat">
+                        <span>
+                            <CountUp start={0} end={900} durataion={10} />
+                            <span>+</span>
+                        </span>
+                        <span className='secondaryText'>
+                            Completed Projects
+                        </span>
+                    </div>
+                    <div className="flexColCenter stat">
+                        <span>
+                            <CountUp start={0} end={200} durataion={20} />
+                            <span>+</span>
+                        </span><span className='secondaryText'>
+                            Happy Clients
+                        </span>
+                    </div>
+                    <div className="flexColCenter stat">
+                        <span>
+                            <CountUp end={28}/>
+                            <span>+</span>
+                        </span><span className='secondaryText'>
+                            Award Winning
+                        </span>
+                    </div>
                 </div>
             </div>
 {/* right side */}
